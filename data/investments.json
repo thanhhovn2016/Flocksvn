@@ -1,0 +1,119 @@
+{
+    "statistics": [
+        {
+            "id":1,
+            "value": "$15,000",
+            "label": "Invested"
+        },
+        {
+            "id":2,
+            "value": "4",
+            "label": "Projects"
+        },
+        {
+            "id":3,
+            "value": "$15,000",
+            "label": "Invested"
+        }
+    ],
+    "investedProjects": [
+        {
+            "id":1,
+            "projectTitle": "Merlino Agent",
+            "category": "Technology",
+            "projectLogo": "/images/merlino.png",
+            "projectCover": "/images/company.png",
+            "investors": 150,
+            "investedDate": "May 10, 2022",
+            "targetAmount": "$10,5000,000",
+            "investedAmount": "$2,500",
+            "closingDate": "May 29, 2022"
+        },
+        {
+            "id":2,
+            "projectTitle": "Merlino Agent",
+            "category": "Technology",
+            "projectLogo": "/images/merlino.png",
+            "projectCover": "/images/company.png",
+            "investors": 200,
+            "investedDate": "April 10, 2022",
+            "targetAmount": "$10,5000,000",
+            "investedAmount": "$5,500",
+            "closingDate": "April 29, 2022"
+        },
+        {
+            "id":3,
+            "projectTitle": "Merlino Agent",
+            "category": "Technology",
+            "projectLogo": "/images/merlino.png",
+            "projectCover": "/images/company.png",
+            "investors": 300,
+            "investedDate": "June 10, 2022",
+            "targetAmount": "$10,5000,000",
+            "investedAmount": "$7,500",
+            "closingDate": "June 29, 2022"
+        }
+    ],
+    "investedProjectsChart": [
+        {
+            "id": 1,
+            "projectTitle":"January",
+            "raisedAmount": 2500
+        },
+        {
+            "id": 2,
+            "projectTitle":"February",
+            "raisedAmount": 3500
+        }
+        ,{
+            "id": 3,
+            "projectTitle":"march",
+            "raisedAmount": 5500
+        },
+        {
+            "id": 4,
+            "projectTitle":"April",
+            "raisedAmount": 4500
+        },
+        {
+            "id": 5,
+            "projectTitle":"May",
+            "raisedAmount": 7500
+        },
+        {
+            "id": 6,
+            "projectTitle":"June",
+            "raisedAmount": 3500
+        },
+        {
+            "id": 1,
+            "projectTitle":"July",
+            "raisedAmount": 2500
+        },
+        {
+            "id": 2,
+            "projectTitle":"August",
+            "raisedAmount": 3500
+        }
+        ,{
+            "id": 3,
+            "projectTitle":"September",
+            "raisedAmount": 5500
+        },
+        {
+            "id": 4,
+            "projectTitle":"October",
+            "raisedAmount": 4500
+        },
+        {
+            "id": 5,
+            "projectTitle":"November",
+            "raisedAmount": 7500
+        },
+        {
+            "id": 6,
+            "projectTitle":"December",
+            "raisedAmount": 3500
+        }
+    ]
+}

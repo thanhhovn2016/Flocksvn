@@ -1,0 +1,83 @@
+.about_banner {
+    background: lightblue url('/images/about-bg.png') no-repeat scroll 100% 100%;
+    min-height: 600px;
+    text-align: left;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+}
+
+.how_work_container{
+    background: linear-gradient(141.36deg, #7A6187 14.69%, #8F6F84 62.42%);
+}
+
+.timeline_container {
+    background-image: url('/images/curve.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+.timeline_step1 {
+    position: absolute;
+    top: 710px;
+    left: 40px;
+    width: 300px;
+    text-align: center;
+}
+
+.timeline_step2 {
+    position: absolute;
+    top: 845px;
+    left: 555px;
+    width: 300px;
+    text-align: center;
+}
+
+.timeline_step3 {
+    position: absolute;
+    top: 1180px;
+    left: 755px;
+    width: 300px;
+    text-align: center;
+}
+
+.timeline_step4 {
+    position: absolute;
+    top: 1260px;
+    left: 40px;
+    width: 300px;
+    text-align: center;
+}
+
+.backed_by_container {
+    background-color: #EEFECD;
+}
+.backed_logos_container {
+    background-color: #E5EECE;
+    border-radius: 16px;
+}
+
+.members_container {
+    background-color: #EFECE5;
+}
+
+.about_bottom_img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+}
+
+@media screen and (min-width:1536px){
+    .timeline_step1 {
+        left: 280px;
+    }
+    .timeline_step2 {
+        left: 850px;
+    }
+    .timeline_step3 {
+        left: 980px;
+    }
+    .timeline_step4 {
+        left: 320px;
+    }
+}

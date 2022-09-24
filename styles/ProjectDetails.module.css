@@ -1,0 +1,71 @@
+.headerFirstGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .headerFirstLogoContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  .logoFirstHeader {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .imageTitleProject {
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    max-height:38rem;
+  }
+  .imageTitlePageFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFF;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+  }
+  .itemsFooter {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  .imageTitlePageFooterIcons {
+    font-size: 1.3rem;
+    align-self: center;
+  }
+  .tabLinkGrid {
+    display: flex;
+    justify-content: space-around;
+    height: 4.5rem;
+    background: #FFF;
+    border-radius: 1rem;
+    align-items: center;
+    margin: 1rem 0 ;
+    padding: 0 0.5rem;
+  }
+  .contentLink {
+    margin: 2.5rem 0 1rem 0;
+  }
+  .slider {
+    height: 10px;
+    cursor: default;
+
+  }
+  .textSliderValue {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  .textSliderValuePrimary {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }

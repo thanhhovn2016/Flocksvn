@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "bgPhoto": "/images/blog-cover.png",
+        "title": "A successfull founder story",
+        "authorName": "Farid Qattali",
+        "authorImg": "/images/blog-author.png",
+        "date": "May 5, 2022"
+    },
+    {
+        "id": 2,
+        "bgPhoto": "/images/story.png",
+        "title": "A successfull founder story",
+        "authorName": "Farid Qattali",
+        "authorImg": "/images/blog-author.png",
+        "date": "May 5, 2022"
+    }
+]

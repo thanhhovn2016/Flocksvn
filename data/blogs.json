@@ -1,0 +1,120 @@
+[
+    {
+        "sectionTitle": "For Investors",
+        "blogs": [
+            {
+                "id": 1,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 2,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 3,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 4,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 5,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 6,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Investors Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "For Companies",
+        "blogs": [
+            {
+                "id": 1,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 2,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 3,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 4,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 5,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            },
+            {
+                "id": 6,
+                "coverPhoto": "/images/blog-cover.png",
+                "title": "Flocks AI Companies Guideline",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ducimus excepturi! Velit ratione totam nisi rem minima eius, commodi ipsam maiores dicta numquam expedita, voluptates libero harum laborum pariatur! Ipsam.",
+                "authorName": "Farid Qattali",
+                "authorImg": "/images/blog-author.png",
+                "date": "May 5, 2022"
+            }
+        ]
+    }
+]

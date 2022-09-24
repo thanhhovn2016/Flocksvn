@@ -1,0 +1,105 @@
+.container {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: grid;
+  height: 100%;
+  box-shadow: 0 7px 30px -10px #aab49685;
+}
+.container:hover {
+  /* -webkit-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0 7px 30px -10px #aab496;
+}
+.image {
+  border-radius: 0.6rem;
+  width: 100%;
+  max-height: 15rem;
+  /* min-height: 15rem; */
+}
+.imageHeader {
+  position: absolute;
+  top: 5px;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  width: 100%;
+}
+.imageLogoContainer {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  
+}
+.imageLogo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #E1E1E1;
+}
+.slider {
+  height: 10px;
+  cursor: default;
+}
+.textSliderValue {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.textSliderValuePrimary {
+  color: #d9fd00;
+  font-weight: 1000;
+  font-size: 20px;
+}
+.footerGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+}
+.imageHeaderTrending {
+  background-color: #fff6a8;
+  cursor: default;
+  display: flex;
+  padding: 0.3rem 0.8rem;
+  gap: 1rem;
+  color: #83ee30;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.imageHeaderEnergy {
+  background-color: #e0ffc8;
+  cursor: default;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  display: flex;
+  padding: 0.3rem 0.8rem;
+  gap: 1rem;
+  color: #3b4e56;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.imageHeaderTechnology {
+  background-color: #ffdcba;
+  cursor: default;
+  font-weight: 600;
+  display: flex;
+  padding: 0.3rem 0.8rem;
+  gap: 1rem;
+  color: #3b4e56;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 11px;
+}
