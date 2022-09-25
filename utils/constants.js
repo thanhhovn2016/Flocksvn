@@ -1,26 +1,26 @@
 // export const baseURL = 'http://localhost:8000/api/v1/';
-export const baseURL = 'http://54.203.235.172:8000/api/v1/';
+//export const baseURL = 'http://54.203.235.172:8000/api/v1/';
 // export const baseURL = 'http://5.189.148.68:8000/api/v1/';
 // export const baseURL = 'http://vmi520323.contaboserver.net/api/v1/';
 // export const baseURL = 'https://www.anarsupermarket.website/api/v1/';
 // export const remoteBaseURL = 'https://www.anarsupermarket.website/api/v1/';
 
 // export const baseURL = "https://shibainuii.com"
-// export const baseURL = 'https://api.flocks.vn/api/v1/';
+export const baseURL = 'https://api.flocks.vn/api/v1/';
 
 export const dong = "đ"
 
 const isOnline = true;
 // export const mediaBaseURL = isOnline ? "https://shibainuii.com" : baseURL.replace("/api/v1/", "");
-//export const mediaBaseURL = isOnline ? "https://uploads.flocks.vn" : baseURL.replace("/api/v1/", "");
-export const mediaBaseURL = baseURL.replace("/api/v1/", "/");
+export const mediaBaseURL = isOnline ? "https://uploads.flocks.vn" : baseURL.replace("/api/v1/", "");
+//export const mediaBaseURL = baseURL.replace("/api/v1/", "/");
 // export const mediaBaseURL = "http://192.168.2.226:8000"
 
 export const API_KEY = 'vaiDTsb0.S7XRhUacCPkyXaBGPt0vUA5QLddEBmn8';
 
 // const frontendDomain = "https://flocks-website.vercel.app/";
 // Change to vercel
-const frontendDomain = "https://flocksvn-frnj.vercel.app/";
+const frontendDomain = "https://flocksvn-site.vercel.app/";
 export const nextJsBaseURL = `${frontendDomain}api/`;
 
 export const googleRedirectUriEn = `${frontendDomain}en/social/google`;
