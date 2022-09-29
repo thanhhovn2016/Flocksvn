@@ -57,8 +57,8 @@ const PresentationProjects = () => {
     { id: t?.company_name, label: t?.company_name, minWidth: 170 },
     { id: t?.email, label: t?.email, minWidth: 100 },
     {
-      id: t?.phoneNumber,
-      label: t?.phoneNumber,
+      id: t?.phone_number,
+      label: t?.phone_number,
       minWidth: 170,
       align: "left",
       // format: (value) => value.toLocaleString('en-US'),
@@ -170,12 +170,12 @@ const PresentationProjects = () => {
             </TableHead>
             <TableBody>
               {userRelatedCompany?.data?.results
-                ?.slice(
-                  paginationState?.page * paginationState?.rowsPerPage,
-                  paginationState?.page * paginationState?.rowsPerPage +
-                    paginationState?.rowsPerPage
-                )
-                .map((row) => {
+                // ?.slice(
+                //   paginationState?.page * paginationState?.rowsPerPage,
+                //   paginationState?.page * paginationState?.rowsPerPage +
+                //     paginationState?.rowsPerPage
+                // )
+                ?.map((row) => {
                   console.log("row", row);
                   return (
                     <TableRow hover role="checkbox" tabIndex={-1} key={row?.id}>
@@ -185,7 +185,7 @@ const PresentationProjects = () => {
                       <TableCell align="left">{row?.abstract}</TableCell>
                       <TableCell align="left">{row?.email}</TableCell>
                       <TableCell align="left">{row?.phoneNumber}</TableCell>
-                      <TableCell align="right">{row?.status}</TableCell>
+                      <TableCell align="left">{row?.status}</TableCell>
                       <TableCell align="right">
                         <Button
                           variant="contained"
