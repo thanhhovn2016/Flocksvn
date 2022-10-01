@@ -617,8 +617,8 @@ React.useEffect(() => {
                   <Grid item md={7} xs={12} pl={2}>
                     <List>
                       {documents?.length > 0 &&
-                        documents?.map((document, index) => (
-                          <ListItem key={index}>
+                        documents?.map((document, index) => {
+                          return(<ListItem key={index}>
                             <Link
                               href={`${mediaBaseURL}${document?.documents?.url}`}
                               color="secondary.dark"
@@ -627,8 +627,8 @@ React.useEffect(() => {
                               {/* {index + 1}. {documentNames[index]} */}
                               {index + 1}. {document?.fileName}
                             </Link>
-                          </ListItem>
-                        ))}
+                          </ListItem>)
+                        })}
                     </List>
                   </Grid>
                 </Grid>

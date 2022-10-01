@@ -55,6 +55,7 @@ const PresentationProjects = () => {
 
   const columns = [
     { id: t?.company_name, label: t?.company_name, minWidth: 170 },
+    { id: t?.project_abstract, label: t?.project_abstract, minWidth: 170 },
     { id: t?.email, label: t?.email, minWidth: 100 },
     {
       id: t?.phone_number,
@@ -182,7 +183,7 @@ const PresentationProjects = () => {
                       <TableCell component="th" scope="row">
                         {row?.companyName}
                       </TableCell>
-                      <TableCell align="left">{row?.abstract}</TableCell>
+                      <TableCell align="left">{row?.abstract.slice(0, 50)}</TableCell>
                       <TableCell align="left">{row?.email}</TableCell>
                       <TableCell align="left">{row?.phoneNumber}</TableCell>
                       <TableCell align="left">{row?.status}</TableCell>

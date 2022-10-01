@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Button, Backdrop, Snackbar, Alert } from "@mui/material";
 import { useDropzone } from "react-dropzone";
 import { useMutation } from "react-query";
@@ -42,16 +42,28 @@ const MediaMultipleUploader = ({
   const [progress, setProgress] = React.useState(0);
   const [fileNames , setFileNames] = React.useState([])
   const { isMobile } = useMediaBreakpoints();
+
+  const  [dataUpload , setDataUpload] = React.useState([])
+
+  const setFileUrlToParent = ( ) =>{
+    const doc = dataUpload.map((item , index) => {
+      return {
+        documents:item,
+        fileName: fileNames?.[index]
+      }
+    })
+    
+    setEntries(doc)
+  }
+  useEffect(() => {
+    setEntries([])
+    setFileUrlToParent()
+  },[dataUpload?.[0]?.id ])
   const mutation = useMutation(uploadMediaFiles, {
     onSuccess: (data) => {
-      console.log("fileNames" , fileNames)
-      const doc = data?.data?.map((item , index) => {
-        return {
-          documents:item,
-          fileName:fileNames?.[index]
-        }
-      })
-      setEntries(doc)},
+      setDataUpload(data?.data)
+      setFileUrlToParent()
+    },
     onError: (err) => {
       setIsOpen(true);
       setFiles([]);
@@ -64,8 +76,10 @@ const MediaMultipleUploader = ({
   };
 
   const onDrop = React.useCallback((acceptedFiles) => {
-
-    console.log("fileName" , acceptedFiles)
+    const fileNameVariable = acceptedFiles?.map((item)=> {
+      return item.name
+    })
+    setFileNames(fileNameVariable)
     setFiles(
       acceptedFiles.map((file) =>
         Object.assign(file, {
@@ -73,9 +87,11 @@ const MediaMultipleUploader = ({
         })
       )
     );
-    setFileNames(acceptedFiles?.map((item) => item?.name))
     acceptedFiles.map((file) => file.name);
-    mutation.mutate({ files: acceptedFiles, onUploadProgress });
+    if (fileNameVariable?.length > 0 ){
+
+      mutation.mutate({ files: acceptedFiles, onUploadProgress });
+    }
   }, []);
   const {
     getRootProps,
@@ -169,6 +185,7 @@ const MediaMultipleUploader = ({
         {(files.length > 0 || fileType === "doc") && (
           <>
             <Button>{t.browse}</Button>
+            
           </>
         )}
         <Box component="aside">
@@ -202,6 +219,7 @@ const MediaMultipleUploader = ({
               : null)}
         </Box>
       </Box>
+    
     </>
   );
 };
