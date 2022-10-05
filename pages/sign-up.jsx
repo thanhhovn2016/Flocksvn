@@ -6,7 +6,7 @@ import { useTranslation } from "../hooks";
 
 const SignUp = () => {
   const { t } = useTranslation();
-
+  //new commit
   return (
     <Container maxWidth="xl">
       <Head>
