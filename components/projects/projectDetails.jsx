@@ -144,9 +144,7 @@ const ContentProjectDetails = (props) => {
           <Box>        
             {slides[currentIndex].isyoutubeurl ? (
               <iframe src={`https://www.youtube.com/embed/${slides[currentIndex].url}`}
-                frameborder='0'
                 allow='autoplay; encrypted-media'
-                allowfullscreen
                 title='video'
                 width= "763"
                 height= "429"
