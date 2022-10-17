@@ -38,7 +38,7 @@ const HeaderFirst = (props) => {
     <Box className={styles.headerFirstGrid}>
       <Box className={styles.headerFirstLogoContent}>
         <Box>
-          <img
+          <img 
             className={styles.logoFirstHeader}
             src={`${mediaBaseURL + props?.logo?.url}`}
             srcSet={`${mediaBaseURL + props?.logo?.url}`}
@@ -59,6 +59,159 @@ const HeaderFirst = (props) => {
   );
 };
 const ContentProjectDetails = (props) => {
+  //slider
+  const slideStyles = {
+    width: "100%",
+    height: "100%",
+    borderRadius: "10px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+  
+  const rightArrowStyles = {
+    position: "absolute",
+    top: "600%",
+    transform: "translate(0, -50%)",
+    right: "252px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  };
+  
+  const leftArrowStyles = {
+    position: "absolute",
+    top: "600%",
+    transform: "translate(0, -50%)",
+    left: "22px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  };
+  
+  const sliderStyles = {
+    position: "relative",
+    height: "100%",
+  };
+  
+  const dotsContainerStyles = {
+    display: "flex",
+    justifyContent: "center",
+  };
+  
+  const dotStyle = {
+    margin: "0 3px",
+    cursor: "pointer",
+    fontSize: "20px",
+  };
+  
+  const ImageSlider = ({ slides }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const goToPrevious = () => {
+      const isFirstSlide = currentIndex === 0;
+      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+      setCurrentIndex(newIndex);
+    };
+    const goToNext = () => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+    };
+    const goToSlide = (slideIndex) => {
+      setCurrentIndex(slideIndex);
+    };
+    const slideStylesWidthBackground = {
+      ...slideStyles,
+      //backgroundImage: `url(${slides[currentIndex].url})`,
+      backgroundImage: ``,
+    };
+  
+    return (
+      <div style={sliderStyles}>
+        <div>
+          <div onClick={goToPrevious} style={leftArrowStyles}>
+            ❰
+          </div>
+          <div onClick={goToNext} style={rightArrowStyles}>
+            ❱
+          </div>
+        </div>
+        <div style={slideStylesWidthBackground}></div>
+      <div> 
+      <Box className={styles.headerFirstGrid}>
+        <Box className={styles.headerFirstLogoContent}>
+          <Box>        
+            {slides[currentIndex].isyoutubeurl ? (
+              <iframe src={`https://www.youtube.com/embed/${slides[currentIndex].url}`}
+                frameborder='0'
+                allow='autoplay; encrypted-media'
+                allowfullscreen
+                title='video'
+                width= "763"
+                height= "429"
+              />
+            ) : (
+              
+                <img
+                  width= "763"
+                  src={`${slides[currentIndex].url}`}
+                  srcSet={`${slides[currentIndex].url}`}
+                  alt={"logo"}
+                  loading="lazy"
+                />
+              
+            )}
+          </Box>
+          <Box>
+            <Typography variant="h5">{props?.name}</Typography>
+            <Typography variant="body2">{props?.subTitle}</Typography>
+          </Box>
+        </Box>
+        <Box>
+        {" "}
+        {t?.started}: <Moment format="DD/MMM/YYYY">{props?.createdAt}</Moment>
+      </Box>
+      </Box>      		
+      </div>
+      <div style={dotsContainerStyles}>
+        {slides.map((slide, slideIndex) => (
+          <div
+            style={dotStyle}
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+          >
+            {slides[slideIndex].isyoutubeurl ? (
+			        <img width="90" src={`https://img.youtube.com/vi/${slides[slideIndex].url}/0.jpg`}/>
+            ) : (
+              <img width="120" src={`${slides[slideIndex].url}`}/>
+            )}
+          </div>
+        ))}
+      </div>
+      </div>
+    );
+  };
+  const ytubeurl = props?.companyData.youtube;
+  const ytubeid = ytubeurl.replace("https://www.youtube.com/watch?v=","");
+  const slides = [
+    { url: ytubeid, title: "beach", isyoutubeurl: true },
+    { url: mediaBaseURL + props?.companyData?.coverImage.url, title: "boat", isyoutubeurl: false },
+    { url: mediaBaseURL + props?.companyData?.coverImage1.url, title: "boat",isyoutubeurl: false },
+    { url: mediaBaseURL + props?.companyData?.coverImage2.url, title: "boat",isyoutubeurl: false },
+  ];
+  const containerStyles = {
+    width: "980px",
+    height: "40px",
+    margin: "0 auto",
+  };
+  //end slider
+  
+
+  console.log(props?.companyData?.coverImage);
+  console.log(props?.companyData.coverImage1);
+  console.log(props?.companyData.coverImage2);
+  console.log(props?.companyData.youtube);
   const [linkDocument, setLinkDocument] = useState(null);
   const { t } = useTranslation();
 
@@ -77,14 +230,9 @@ const ContentProjectDetails = (props) => {
             createdAt={props?.companyData?.createdAt}
           />
 
-          <img
-            className={styles.imageTitleProject}
-            src={`${mediaBaseURL + props?.companyData?.coverImage?.url}`}
-            srcSet={`${mediaBaseURL + props?.companyData?.coverImage?.url}`}
-            alt={"image Header"}
-            loading="lazy"
-            style={{ maxHeight: "38rem" }}
-          />
+          <div style={containerStyles}>
+            <ImageSlider slides={slides} />
+          </div>
         </Grid>
         <Grid item xs={12} md={4}>
           <SiteBarDetails company={props?.companyData} />
@@ -431,12 +579,12 @@ const SiteBarDetails = (props) => {
 console.log("router" , router?.query)
   const hasUserInvested =  async () => {
     const {data} = await axiosInstance.get(`company/company/presentation/${router?.query?.id}/hase_user_invested/`)
+    console.log(data);
     return data
   }
 
   const hasInvested = useQuery("hase_user_invested", hasUserInvested)
   console.log("hasInvested " , hasInvested)
-  console.log("hasInvested" ,  hasInvested)
   const handleInvestFunction = (event) => {
     const token = getAccessToken()
     const id = event?.target?.id

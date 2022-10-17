@@ -38,6 +38,8 @@ const CompanyProfile = (props) => {
   const [open, setOpen] = React.useState(false);
   const [entrepreneurName, setEntreprenureName] = React.useState([]);
   const [registrationDoc, setRegistrationDoc] = React.useState();
+  const [registrationDoc1, setRegistrationDoc1] = React.useState();
+  const [registrationDoc2, setRegistrationDoc2] = React.useState();
   const [taxReceipt, setTaxReceipt] = React.useState();
   const [introVideo, setIntroVideo] = React.useState();
   const [errors, setErrors] = React.useState(null);
@@ -243,6 +245,11 @@ const CompanyProfile = (props) => {
                 name="companyProfile.github"
                 placeholder={t?.github}
               />
+              <TextInput
+                label={t?.github}
+                name="companyProfile.youtube_url"
+                placeholder={t?.github}
+              />
               <Grid item md={12} xs={12} my={3}>
                 <InputLabel htmlFor="registration-doc" shrink>
                   {t?.upload_registration_doc}
@@ -251,6 +258,22 @@ const CompanyProfile = (props) => {
                   id="registration-doc"
                   fileType="image"
                   setEntry={setRegistrationDoc}
+                />
+                <InputLabel htmlFor="registration-doc1" shrink>
+                  {t?.upload_company_images}
+                </InputLabel>
+                <MediaUploader
+                  id="registration-doc1"
+                  fileType="image"
+                  setEntry={setRegistrationDoc1}
+                />
+                <InputLabel htmlFor="registration-doc2" shrink>
+                  {t?.upload_company_images}
+                </InputLabel>
+                <MediaUploader
+                  id="registration-doc2"
+                  fileType="image"
+                  setEntry={setRegistrationDoc2}
                 />
               </Grid>
               <Grid item md={12} xs={12} my={3}>

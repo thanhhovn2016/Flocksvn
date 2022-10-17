@@ -20,7 +20,7 @@ export const getProjectCategories = async () => {
 
 export const getProjectDetails = async (id) => {
 
-    const {data} = await axiosWithApikey.get(`${apiRoutes.company}${id}?expand=logo_image,cover_image,company_category,company_present_team_member,company_present_team_member.image,present_details,present_documents,present_documents.file`);
+    const {data} = await axiosWithApikey.get(`${apiRoutes.company}${id}?expand=logo_image,cover_image,company_category,company_present_team_member,company_present_team_member.image,present_details,present_documents,present_documents.file,cover_image_1,cover_image_2`);
 
     return data;
 }

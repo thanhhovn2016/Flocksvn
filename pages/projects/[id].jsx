@@ -16,6 +16,7 @@ const ProjectDetailsPage = (props) => {
     ["project", projectId],
     async () => {
       const { data } = await axiosInstance.get(`/project/${projectId}`);
+      console.log(data);
       return data;
     }
   );

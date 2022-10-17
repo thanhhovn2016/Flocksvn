@@ -100,6 +100,7 @@
   "website": "Website",
   "phone_number": "Phone Number",
   "github": "Github",
+  "upload_company_images" : "Upload company images",
   "upload_registration_doc": "Upload company registration",
   "upload_tax_receipt": " Upload tax receipt",
   "upload_intro_video": "Upload company introduction video",

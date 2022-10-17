@@ -76,6 +76,10 @@ const ProposalCreationForm = (props) => {
   const [logoErr, setLogoErr] = React.useState(null);
   const [coverPhoto, setCoverPhoto] = React.useState();
   const [coverPhotoErr, setCoverPhotoErr] = React.useState(null);
+  const [coverPhoto1, setCoverPhoto1] = React.useState();
+  const [coverPhotoErr1, setCoverPhotoErr1] = React.useState(null);
+  const [coverPhoto2, setCoverPhoto2] = React.useState();
+  const [coverPhotoErr2, setCoverPhotoErr2] = React.useState(null);
   const [documents, setDocuments] = React.useState([]);
   const [deleteDocuments , setDeleteDocuments] = useState([])
   const [documentNames, setDocumentNames] = React.useState([]);
@@ -106,6 +110,7 @@ const ProposalCreationForm = (props) => {
       .min(3, t.name_invalid_length_message)
       .required(t.project_name_required_message),
     projectSubtitle: Yup.string().required(t.project_subtitle_required_message),
+    youtubeUrl: Yup.string().required(t.project_subtitle_required_message),
     projectAbstract: Yup.string().required(t.project_abstract_required_message),
     founded: Yup.date().required(t.founded_required_message),
     employees: Yup.number().required(t.employees_required_message),
@@ -228,6 +233,8 @@ const  mutationUpdate = useMutation(updateProject,{
   const handleSubmit = async (values, actions) => {
     setLogoErr(null);
     setCoverPhotoErr(null);
+    setCoverPhotoErr1(null);
+    setCoverPhotoErr2(null);
     
     detailSections.map((section) => {
       if (section.title === "" || section.title.length === 0) {
@@ -246,6 +253,12 @@ const  mutationUpdate = useMutation(updateProject,{
     }
     if (!coverPhoto && !props?.id) {
       setCoverPhotoErr(t.cover_photo_required_message);
+    }
+    if (!coverPhoto1 && !props?.id) {
+      setCoverPhotoErr1(t.cover_photo_required_message);
+    }
+    if (!coverPhoto2 && !props?.id) {
+      setCoverPhotoErr2(t.cover_photo_required_message);
     }
     // if (
     //   detailSections.every(
@@ -287,6 +300,7 @@ const  mutationUpdate = useMutation(updateProject,{
     let newValues = {
       companyName: values.projectName,
       companySubTitle: values.projectSubtitle,
+      youtubeUrl : values.youtubeUrl,
       founded: values.founded,
       abstract: values.projectAbstract,
       investmentMin: values.minimumInvestment,
@@ -304,6 +318,8 @@ const  mutationUpdate = useMutation(updateProject,{
       } : detailSections,
       ...(logo?.id ? {logoImage: logo?.id}:{}),
       ...(coverPhoto ? {coverImage: coverPhoto?.id} : {}),
+      ...(coverPhoto1 ? {coverImage1: coverPhoto1?.id} : {}),
+      ...(coverPhoto2 ? {coverImage2: coverPhoto2?.id} : {}),
       presentDocument: props?.id ? {
         // deleteItems:[],
         ...(createDocument?.length > 0 ? {createItems:createDocument} : {}),
@@ -364,6 +380,7 @@ React.useEffect(() => {
       initialValues={{
         projectName: props?.id ? props?.companyData?.companyName : "",
         projectSubtitle: props?.id ? props?.companyData?.companySubTitle : "",
+        youtubeUrl: props?.id ? props?.companyData?.youtubeUrl : "",
         projectAbstract: props?.id ? props?.companyData?.abstract : "",
         founded: props?.id ? props?.companyData?.founded : "",
         employees: props?.id ? props?.companyData?.employees : "",
@@ -423,6 +440,12 @@ React.useEffect(() => {
                   // rows={5}
                   // id="filled-multiline-static"
                 />
+                <ProposalFormInput
+                  labelTxt={t?.project_subtitle}
+                  name="youtubeUrl"
+                  defaultValue={props?.companyData?.youtubeUrl || ""}
+                  {...formik.getFieldProps("youtubeUrl")}
+                />
                 <Grid item md={12} xs={12} my={3}>
                   <Grid container spacing={10}>
                     <Grid item md={3} xs={12}>
@@ -449,6 +472,28 @@ React.useEffect(() => {
                         setEntry={setCoverPhoto}
                       />
                       <FormHelperText error>{coverPhotoErr}</FormHelperText>
+                      <InputLabel htmlFor="cover-photo1" shrink>
+                        {t?.cover_photo}
+                      </InputLabel>
+                      <MediaUploader
+                        id="cover-photo1"
+                        fileType="image"
+                        width={"100%"}
+                        fileUrl={mediaBaseURL + props?.companyData?.coverImage1?.url}
+                        setEntry={setCoverPhoto1}
+                      />
+                      <FormHelperText error>{coverPhotoErr1}</FormHelperText>
+                      <InputLabel htmlFor="cover-photo2" shrink>
+                        {t?.cover_photo}
+                      </InputLabel>
+                      <MediaUploader
+                        id="cover-photo2"
+                        fileType="image"
+                        width={"100%"}
+                        fileUrl={mediaBaseURL + props?.companyData?.coverImage2?.url}
+                        setEntry={setCoverPhoto2}
+                      />
+                      <FormHelperText error>{coverPhotoErr2}</FormHelperText>
                     </Grid>
                   </Grid>
                 </Grid>

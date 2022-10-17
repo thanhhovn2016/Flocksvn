@@ -83,7 +83,7 @@ const PresentationProjects = () => {
     try {
       const { data } = await axiosInstance.get(
         apiRoutes.companyUserRelatedCompany +
-          `?expand=cover_image,company_category,logo_image&page=${paginationState?.page}&page_size=${paginationState?.rowsPerPage}`
+          `?expand=cover_image,company_category,logo_image,cover_image_1,cover_image_2&page=${paginationState?.page}&page_size=${paginationState?.rowsPerPage}`
       );
       setIsLoading(false);
       return data;
