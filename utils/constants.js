@@ -20,7 +20,7 @@ export const API_KEY = 'vaiDTsb0.S7XRhUacCPkyXaBGPt0vUA5QLddEBmn8';
 
 // const frontendDomain = "https://flocks-website.vercel.app/";
 // Change to vercel
-const frontendDomain = "https://localhost:3000/";
+const frontendDomain = "https://flocksvn-site.vercel.app/";
 export const nextJsBaseURL = `${frontendDomain}api/`;
 
 export const googleRedirectUriEn = `${frontendDomain}en/social/google`;
